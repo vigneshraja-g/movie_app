@@ -2,36 +2,24 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import Pagination from "rc-pagination";
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import "rc-pagination/assets/index.css";
 import { searchMovies } from "./redux/action";
 import Movie from "./Movie";
 
 class MovieList extends Component {
-  state = {
-    movies: [],
-    current: 1
-  };
+  state = {};
 
   onChange = page => {
-    this.setState(
-      {
-        current: page,
-        loading: true
-      },
-      () => {
-        const { searchTerm } = this.props;
-        const { current } = this.state;
-        this.props.searchMovies(searchTerm, current);
-      }
-    );
+    const { searchTerm } = this.props;
+    this.props.searchMovies(searchTerm, page);
   };
 
   render() {
-    const { current } = this.state;
     const {
       movies,
       totalpages,
+      page,
       searchTerm,
       loading,
       response,
@@ -78,7 +66,7 @@ class MovieList extends Component {
           {totalpages && totalpages > 10 ? (
             <Pagination
               onChange={this.onChange}
-              current={current}
+              current={page}
               total={totalpages}
             />
           ) : (
@@ -97,7 +85,8 @@ function mapStateToProps(state) {
     searchTerm: state.searchTerm,
     response: state.response,
     error: state.error,
-    loading: state.loading
+    loading: state.loading,
+    page: state.page
   };
 }
 

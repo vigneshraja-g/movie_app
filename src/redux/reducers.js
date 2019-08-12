@@ -20,6 +20,7 @@ function movieSearch(state = initialState, action) {
       return {
         ...state,
         loading: false,
+        page: action.payload.page,
         searchTerm: action.payload ? action.payload.searchTerm : '',
         response: action.payload ? action.payload.Response : false,
         error: action.payload ? action.payload.Error : false,

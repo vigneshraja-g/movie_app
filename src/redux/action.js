@@ -16,6 +16,7 @@ export function searchMovies(searchTerm, page) {
       .then(res => res.json())
       .then((data) => {
         data.searchTerm = searchTerm;
+        data.page = page;
         dispatch(searchMovie({ type: MOVIE_SEARCH_SUCCESS, payload: data }));
       })
       .catch((err) => {
