@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#ffffff;display:block;z-index:1;position:relative" width="1920" height="500" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 500">
+<g transform="" stroke="none" fill="#000000" stroke-width="1px"><linearGradient id="ldbk-nq4q5u6dq7r" x1="-0.1" y1="0" x2="1.1" y2="0.554748" stroke="none" fill="#000000" stroke-width="1px">
+  <animate attributeName="y2" repeatCount="indefinite" dur="3.3333333333333335s" keyTimes="0;0.5;1" values="-0.59;0.59;-0.59" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline" stroke="none" fill="#000000" stroke-width="1px"></animate>
+  <stop stop-color="#aec5b4" offset="0" stroke="none" fill="#000000" stroke-width="1px"></stop>
+  <stop stop-color="#1bb0cf" offset="1" stroke="none" fill="#000000" stroke-width="1px"></stop>
+</linearGradient>
+<rect x="0" y="0" width="1920" height="500" fill="url(&quot;#ldbk-nq4q5u6dq7r&quot;)" stroke="none" stroke-width="1px"></rect></g>
+</svg>
