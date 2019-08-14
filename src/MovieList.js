@@ -38,6 +38,9 @@ class MovieList extends Component {
               <div>
                 {response && response !== "False" ? (
                   <MovieGrid>
+                    <h3 style={{display:'block', width: '100%', margin: '10px 0'}}>
+                      You searched for: {searchTerm}, {totalpages} results found{" "}
+                    </h3>
                     {movies
                       ? movies.map((movie, id) => (
                           <Movie key={id} details={movie} />
